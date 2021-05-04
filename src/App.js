@@ -9,7 +9,12 @@ function App() {
   return (
     <div className="App">
       <section className='App-content'>
-        <Route path="/gif/:keyword" component={ListOfGifs} />
+        
+        <Route 
+          path="/gif/:keyword" 
+          component={ListOfGifs} />
+
+
       </section>
     </div>
   );
