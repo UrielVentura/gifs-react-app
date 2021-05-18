@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
-import Gif from './Gif'
-import getGifs from '../services/getGifs'
+import Gif from '../../components/Gif'
+import getGifs from '../../services/getGifs'
 
-const ListOfGifs = ({ params }) => {
+const SearchResults = ({ params }) => {
   const {keyword} = params  
   const [gifs, setGifs] = useState([])
   
@@ -21,4 +21,4 @@ const ListOfGifs = ({ params }) => {
     )
 }
 
-export default ListOfGifs
+export default SearchResults

@@ -1,18 +1,24 @@
-import React from 'react';
+ import React,{useState} from 'react';
 import './App.css';
-import ListOfGifs from './components/ListOfGifs';
-import { Route } from "wouter";
+import SearchResults from './pages/SearchResults/index';
+import { Link, Route } from "wouter";
+import Home from './pages/home';
 
 function App() {
-
 
   return (
     <div className="App">
       <section className='App-content'>
         
-        <Route 
-          path="/gif/:keyword" 
-          component={ListOfGifs} />
+        <Route
+          component={Home}
+          path="/"
+
+        />
+        <Route
+          path="/search/:keyword"
+          component={SearchResults}
+        />
 
 
       </section>
