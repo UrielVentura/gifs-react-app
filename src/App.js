@@ -3,26 +3,38 @@ import './App.css';
 import SearchResults from './pages/SearchResults/index';
 import { Link, Route } from "wouter";
 import Home from './pages/home';
+import Detail from './pages/detail';
+import StacticContext from './context/StaticContext'
 
 function App() {
 
   return (
-    <div className="App">
-      <section className='App-content'>
-        
-        <Route
-          component={Home}
-          path="/"
+    
+    <StacticContext >
+      <div className="App">
+        <section className='App-content'>
+          <Link to='/'>
+            <img alt='GiffyLogo' src='/logo.png' />
 
-        />
-        <Route
-          path="/search/:keyword"
-          component={SearchResults}
-        />
+          </Link>
+          <Route
+            component={Home}
+            path="/"
+
+          />
+          <Route
+            path="/search/:keyword"
+            component={SearchResults}
+          />
+          <Route
+            component={Detail}
+            path="/gif/:id"
+          />
 
 
-      </section>
-    </div>
+        </section>
+      </div>
+    </StacticContext>
   );
 }
 

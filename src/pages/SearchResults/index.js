@@ -18,7 +18,7 @@ const SearchResults = ({ params }) => {
         url={url}
         />
 
-    )
+    ) 
 }
 
 export default SearchResults
